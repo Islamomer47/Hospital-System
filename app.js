@@ -43,7 +43,7 @@ function displayPatientCard(patientInfo, index) {
             <button onclick="deletePatient(${index})">Delete</button>
         `;
 
-  cardContainer.appendChild(card);.
+  cardContainer.appendChild(card);
 }
 
 function deletePatient(index) {
