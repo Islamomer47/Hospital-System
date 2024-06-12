@@ -5,9 +5,12 @@ function submitForm() {
   const Date = form.Date.value;
   const gender = form.gender.value;
   const phone = form.phone.value;
-  const chronicDiseases = Array.from(form.chronicDiseases.selectedOptions).map(
-    (option) => option.text
-  );
+  const chronicDiseases = [];
+  const selectedOptions = form.chronicDiseases.selectedOptions;
+
+  for (let i = 0; i < selectedOptions.length; i++) {
+    chronicDiseases.push(selectedOptions[i].text);
+  }
 
   const patientInfo = {
     fullName,
@@ -40,7 +43,7 @@ function displayPatientCard(patientInfo, index) {
             <button onclick="deletePatient(${index})">Delete</button>
         `;
 
-  cardContainer.appendChild(card);
+  cardContainer.appendChild(card);.
 }
 
 function deletePatient(index) {
