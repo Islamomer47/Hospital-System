@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Patient Information Management System</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="navbar">
+      <h1>Al-Islam Hospital</h1>
+      <div class="nav-links">
+        <a href="#">Home</a>
+        <a href="#">About Us</a>
+        <a href="#">Services</a>
+        <a href="#">Contact</a>
+      </div>
+    </div>
+    <div class="main">
+      <div class="form-container">
+        <h2>Patient Information Registration</h2>
+        <form id="patientForm">
+          <label for="fullName">Full Name:</label>
+          <input type="text" id="fullName" name="fullName" required />
+
+          <label for="password">Password:</label>
+          <input type="password" id="password" name="password" required />
+
+          <label for="date">Date of Birth:</label>
+          <input type="date" id="date" name="Date" required />
+
+          <label for="gender">Gender:</label>
+          <select id="gender" name="gender" required>
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+          </select>
+
+          <label for="phone">Phone Number:</label>
+          <input type="tel" id="phone" name="phone" required />
+
+          <label for="chronicDiseases">Chronic Diseases:</label>
+          <select id="chronicDiseases" name="chronicDiseases" multiple>
+            <option value="diabetes">Diabetes</option>
+            <option value="hypertension">Hypertension</option>
+            <option value="heartDisease">Heart Disease</option>
+            <option value="asthma">Asthma</option>
+          </select>
+
+          <button type="button" onclick="submitForm()">Submit</button>
+          <button
+            type="button"
+            onclick="clearAllPatients()"
+            style="background-color: rgb(88, 221, 163); margin-top: 0.5em"
+          >
+            Clear All Patients
+          </button>
+        </form>
+      </div>
+      <div class="card-container" id="cardContainer"></div>
+    </div>
+    <div class="footer">
+      <p>&copy; Al-Islam Hospital.</p>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>
